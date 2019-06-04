@@ -1,0 +1,28 @@
+<div class="container-charges">
+  <div class="container-1-charges">
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <label class="amount">
+          <div>
+            <span>Vous avez choisis le Paiment par Stripe !</span>
+          </div>
+          <div>
+            <span>Montant: $5.00</span>
+          </div>
+        </label>
+      </article>
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="A month's subscription"
+              data-amount="500"
+              data-locale="auto"></script>
+    <% end %>
+
+    </div>
+</div>
