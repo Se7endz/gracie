@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/static_lp'
+  
   root 'pages#landing_page'
   #root to: 'home#index'
   devise_for :users, controllers: {
