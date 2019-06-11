@@ -1,2 +1,588 @@
-<h1>Pages#static_lp</h1>
-<p>Find me in app/views/pages/static_lp.html.erb</p>
+<div class="container">
+<div class="row">
+        <div class="col-sm-3">
+            <a href="#vtab" data-toggle="tab" class="btn btn-block btn-secondary active">Formule</a>
+            <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
+              <li><a href="#vtab1" data-toggle="tab" class="btn btn-block btn-primary text-uppercase">JIU-JITSU BRÉSILIEN</a></li>
+              <li><a href="#vtab2" data-toggle="tab" class="btn btn-block btn-primary text-uppercase">MUAY THAÏ & MMA</a></li>
+              <li><a href="#vtab3" data-toggle="tab" class="btn btn-block btn-primary text-uppercase">BarraFiT</a></li>
+              <li><a href="#vtab4" data-toggle="tab" class="btn btn-block btn-primary text-uppercase">YOGA</a></li>
+              <li><a href="#vtab5" data-toggle="tab" class="btn btn-block btn-primary text-uppercase">PRÉPARATION PHYSIQUE</a></li>
+              <li><a href="#vtab6" data-toggle="tab" class="btn btn-block btn-primary text-uppercase">FORMULE ENFANTS</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            <div class="tab-content">
+            	<div role="tabpanel" class="tab-pane fade in active text-center" id="vtab">
+            		<p>Choisissez votre formule !!</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in active text-center" id="vtab1">
+                	<h2>JIU-JITSU BRÉSILIEN</h2>
+                    <section id="tabs" class="project-tab">
+				        <div class="row">
+				            <div class="col-md-12">
+				                <nav>
+				                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+				                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">GB 1</a>
+				                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">GB 2</a>
+				                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">GB 3</a>
+				                        <a class="nav-item nav-link" id="nav-BBC-tab" data-toggle="tab" href="#nav-BBC" role="tab" aria-controls="nav-BBC" aria-selected="false">BLACK BELT COMPETITION</a>
+				                    </div>
+				                </nav>
+				                <div class="tab-content" id="nav-tabContent">
+				                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+				                        <section class="pricing py-5">
+										  <div class="container">
+										    <div class="row">
+										      <!-- Free Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Monthly</h5>
+										            <h6 class="card-price text-center">75€</h6>
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB1-1").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Plus Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Quarterly</h5>
+										            <h6 class="card-price text-center">210€<span class="period">/3 month</span></h6>
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB1-2").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Pro Tier -->
+										      <div class="col-lg-4">
+										        <div class="card">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Annualy</h5>
+										            <h6 class="card-price text-center">550€<span class="period">/year</span></h6>
+										           
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB1-3").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										    </div>
+										  </div>
+										</section>
+				                    </div>
+				                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+				                        <section class="pricing py-5">
+										  <div class="container">
+										    <div class="row">
+										      <!-- Free Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Monthly</h5>
+										            <h6 class="card-price text-center">85€</h6>
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB2-1").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Plus Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Quarterly</h5>
+										            <h6 class="card-price text-center">240€<span class="period">/3 month</span></h6>
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB2-2").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Pro Tier -->
+										      <div class="col-lg-4">
+										        <div class="card">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Annualy</h5>
+										            <h6 class="card-price text-center">650€<span class="period">/year</span></h6>
+										           
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB2-3").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										    </div>
+										  </div>
+										</section>
+				                    </div>
+				                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+				                        <section class="pricing py-5">
+										  <div class="container">
+										    <div class="row">
+										      <!-- Free Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Monthly</h5>
+										            <h6 class="card-price text-center">90€</h6>
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB3-1").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Plus Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Quarterly</h5>
+										            <h6 class="card-price text-center">250€<span class="period">/3 month</span></h6>
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB3-2").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Pro Tier -->
+										      <div class="col-lg-4">
+										        <div class="card">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+										            <h6 class="card-price text-center">700€<span class="period">/year</span></h6>
+										           
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "GB3-3").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										    </div>
+										  </div>
+										</section>
+				                    </div>
+				                    <div class="tab-pane fade" id="nav-BBC" role="tabpanel" aria-labelledby="nav-BBC-tab">
+				                        <section class="pricing py-5">
+										  <div class="container">
+										    <div class="row">
+										      <!-- Free Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Monthly</h5>
+										            <h6 class="card-price text-center">100€</h6>
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "BBC-1").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Plus Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Quarterly</h5>
+										            <h6 class="card-price text-center">300€<span class="period">/3 month</span></h6>
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "BBC-2").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Pro Tier -->
+										      <div class="col-lg-4">
+										        <div class="card">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+										            <h6 class="card-price text-center">800€<span class="period">/year</span></h6>
+										           
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "BBC-3").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										    </div>
+										  </div>
+										</section>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				</section>
+                </div>
+
+
+                <div role="tabpanel" class="tab-pane fade" id="vtab2">
+                    <h2>MUAY THAÏ & MMA</h2>
+                    <section id="tabs" class="project-tab">
+				        <div class="row">
+				            <div class="col-md-12">
+				                <nav>
+				                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+				                        <a class="nav-item nav-link active" id="nav-muay_thaï-tab" data-toggle="tab" href="#nav-muay_thaï" role="tab" aria-controls="nav-muay_thaï" aria-selected="true">MUAY THAÏ</a>
+				                        <a class="nav-item nav-link" id="nav-muay-thaï-mma-tab" data-toggle="tab" href="#nav-muay-thaï-mma" role="tab" aria-controls="nav-muay-thaï-mma" aria-selected="false">MUAY THAÏ + MMA</a>
+				                    </div>
+				                </nav>
+				                <div class="tab-content" id="nav-tabContent">
+				                    <div class="tab-pane fade show active" id="nav-muay_thaï" role="tabpanel" aria-labelledby="nav-muay_thaï-tab">
+				                        <section class="pricing py-5">
+										  <div class="container">
+										    <div class="row">
+										      <!-- Free Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Monthly</h5>
+										            <h6 class="card-price text-center">75€</h6>
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "MT-1").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Plus Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Quarterly</h5>
+										            <h6 class="card-price text-center">200€<span class="period">/3 month</span></h6>
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "MT-2").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Pro Tier -->
+										      <div class="col-lg-4">
+										        <div class="card">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Annualy</h5>
+										            <h6 class="card-price text-center">450€<span class="period">/year</span></h6>
+										           
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "MT-3").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										    </div>
+										  </div>
+										</section>
+				                    </div>
+				                    
+				                    <div class="tab-pane fade" id="nav-muay-thaï-mma" role="tabpanel" aria-labelledby="nav-muay-thaï-mma-tab">
+				                        <section class="pricing py-5">
+										  <div class="container">
+										    <div class="row">
+										      <!-- Free Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Monthly</h5>
+										            <h6 class="card-price text-center">100€</h6>
+										            
+										           <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "MMA-1").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Plus Tier -->
+										      <div class="col-lg-4">
+										        <div class="card mb-5 mb-lg-0">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Quarterly</h5>
+										            <h6 class="card-price text-center">250€<span class="period">/3 month</span></h6>
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "MMA-2").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										      <!-- Pro Tier -->
+										      <div class="col-lg-4">
+										        <div class="card">
+										          <div class="card-body">
+										            <h5 class="card-title text-muted text-uppercase text-center">Annualy</h5>
+										            <h6 class="card-price text-center">700€<span class="period">/year</span></h6>
+										           
+										            
+										            <%= form_tag(charges_path, method: 'post') do%>
+										            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "MMA-3").ids[0]).price %>" />
+										            
+										           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+										            <% end %>
+										          </div>
+										        </div>
+										      </div>
+										    </div>
+										  </div>
+										</section>
+				                    </div>
+				                    
+				                </div>
+				            </div>
+				        </div>
+				</section>
+            </div>
+
+
+            <div role="tabpanel" class="tab-pane fade text-center" id="vtab3">
+                <h2>BARRAFIT</h2>
+                
+			                
+                <div class="tab-content" id="nav-tabContent">
+                    <section class="pricing py-5">
+					  <div class="container">
+					    <div class="row">
+					      <!-- Free Tier -->
+					      <div class="col-lg-4">
+					        <div class="card mb-5 mb-lg-0">
+					          <div class="card-body">
+					            <h5 class="card-title text-muted text-uppercase text-center">Monthly</h5>
+					            <h6 class="card-price text-center">50€</h6>
+					            
+					            <%= form_tag(charges_path, method: 'post') do%>
+					            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "BF-1").ids[0]).price %>"/>
+					            
+					           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+					            <% end %>
+					          </div>
+					        </div>
+					      </div>
+					      <!-- Plus Tier -->
+					      <div class="col-lg-4">
+					        <div class="card mb-5 mb-lg-0">
+					          <div class="card-body">
+					            <h5 class="card-title text-muted text-uppercase text-center">Quarterly</h5>
+					            <h6 class="card-price text-center">150€<span class="period">/3 month</span></h6>
+					            
+					            <%= form_tag(charges_path, method: 'post') do%>
+					            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "BF-2").ids[0]).price %>"/>
+					            
+					           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+					            <% end %>
+					          </div>
+					        </div>
+					      </div>
+					      <!-- Pro Tier -->
+					      <div class="col-lg-4">
+					        <div class="card">
+					          <div class="card-body">
+					            <h5 class="card-title text-muted text-uppercase text-center">Annualy</h5>
+					            <h6 class="card-price text-center">250€<span class="period">/year</span></h6>
+					           
+					            
+					            <%= form_tag(charges_path, method: 'post') do%>
+					            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "BF-3").ids[0]).price %>"/>
+					            
+					           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+					            <% end %>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</section>
+            	</div>       
+			</div>
+
+			<div role="tabpanel" class="tab-pane fade text-center" id="vtab4">
+                <h2>YOGA</h2>
+                <div class="tab-content" id="nav-tabContent">
+                    <section class="pricing py-5">
+					  <div class="container">
+					    <div class="row">
+					      <!-- Free Tier -->
+					      
+					      <!-- Plus Tier -->
+					      <div class="col-lg-6">
+					        <div class="card mb-5 mb-lg-0">
+					          <div class="card-body">
+					            <h5 class="card-title text-muted text-uppercase text-center">En groupe</h5>
+					            <h6 class="card-price text-center">15€</h6>
+					            
+					            <%= form_tag(charges_path, method: 'post') do%>
+					            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "YG-1").ids[0]).price %>"/>
+					            
+					           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+					            <% end %>
+					          </div>
+					        </div>
+					      </div>
+					      <!-- Pro Tier -->
+					      <div class="col-lg-6">
+					        <div class="card">
+					          <div class="card-body">
+					            <h5 class="card-title text-muted text-uppercase text-center">En solo</h5>
+					            <h6 class="card-price text-center">50€</h6>
+					           
+					            
+					            <%= form_tag(charges_path, method: 'post') do%>
+					            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "YG-2").ids[0]).price %>"/>
+					            
+					           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+					            <% end %>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</section>
+            	</div> 
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade text-center" id="vtab5">
+                <h2>PREPARATION PHYSIQUE</h2>
+                <div class="tab-content" id="nav-tabContent">
+                    <section class="pricing py-5">
+					  <div class="container">
+					    <div class="row">
+					      <!-- Free Tier -->
+					      
+					      <!-- Plus Tier -->
+					      <div class="col-lg-6">
+					        <div class="card mb-5 mb-lg-0">
+					          <div class="card-body">
+					            <h5 class="card-title text-muted text-uppercase text-center">En groupe</h5>
+					            <h6 class="card-price text-center">15€</h6>
+					            
+					            <%= form_tag(charges_path, method: 'post') do%>
+					            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "PP-1").ids[0]).price %>"/>
+					            
+					           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+					            <% end %>
+					          </div>
+					        </div>
+					      </div>
+					      <!-- Pro Tier -->
+					      <div class="col-lg-6">
+					        <div class="card">
+					          <div class="card-body">
+					            <h5 class="card-title text-muted text-uppercase text-center">En solo</h5>
+					            <h6 class="card-price text-center">50€</h6>
+					           
+					            
+					            <%= form_tag(charges_path, method: 'post') do%>
+					            	<input type="hidden" id="price" name="price" size="1" value="<%= Formula.find(Formula.where(name: "PP-2").ids[0]).price %>"/>
+					            
+					           		<%= submit_tag "Souscrire", class: "btn btn-block btn-primary text-uppercase"  %>
+					            <% end %>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</section>
+            	</div> 
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade text-center" id="vtab6">
+                <h2>FORMULE ENFANTS</h2>
+                <div class="tab-content" id="nav-tabContent">
+                    <section class="pricing py-5">
+					  <div class="container">
+					    <div class="row">
+					      <!-- Free Tier -->
+					      
+					      <!-- Plus Tier -->
+					      <div class="col-lg-6">
+					        <div class="card mb-5 mb-lg-0">
+					          <div class="card-body">
+					            <h5 class="card-title text-muted text-uppercase text-center">1 COURS/SEMAINE</h5>
+					            <h6 class="card-price text-center">275€</h6>
+					            <hr>
+						            <ul class="fa-ul">
+						              <li><span class="fa-li"><input type="checkbox"></span><strong class="danger">-55€</strong> SI 1 PARENT LICENCIÉ</li>
+						              <li><span class="fa-li"><input type="checkbox"></i></span><strong>-55€</strong> SI ENFANT DÉJÀ INSCRIT LA SAISON PRÉCÉDENTE</li>
+						              <li><span class="fa-li"><input type="checkbox"></i></span><strong>-70€</strong> SI L’ENFANT EST UNE FILLE</li>
+						              <li><span class="fa-li"><input type="checkbox"></i></span><strong>-70€</strong>SI ENFANT SUPP ( à partir du deuxième enfant inscrit )</li>
+						            </ul>
+					            
+					            <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+					          </div>
+					        </div>
+					      </div>
+					      <!-- Pro Tier -->
+					      <div class="col-lg-6">
+					        <div class="card">
+					          <div class="card-body">
+					            <h5 class="card-title text-muted text-uppercase text-center">ALL ACCESS</h5>
+					            <h6 class="card-price text-center">375€</h6>
+					           	<hr>
+						            <ul class="fa-ul">
+						              <li><span class="fa-li"><input type="checkbox"></span><strong class="text-danger">-75€</strong> SI 1 PARENT LICENCIÉ</li>
+						              <li><span class="fa-li"><input type="checkbox"></i></span><strong>-75€</strong> SI ENFANT DÉJÀ INSCRIT LA SAISON PRÉCÉDENTE</li>
+						              <li><span class="fa-li"><input type="checkbox"></i></span><strong>-95€</strong> SI L’ENFANT EST UNE FILLE</li>
+						              <li><span class="fa-li"><input type="checkbox"></i></span><strong>-95€</strong>SI ENFANT SUPP ( à partir du deuxième enfant inscrit )</li>
+						            </ul>
+					            
+					            <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</section>
+            	</div> 
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</div>

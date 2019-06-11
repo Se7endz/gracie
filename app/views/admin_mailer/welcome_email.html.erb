@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bonjour <%= @admin.first_name %> et bienvenue dans l'équipe Administrateur de Gracie Barra Paris !</h1>
+    <p>
+      Ton compte est lié à l'e-mail suivant : <%= @admin.email %>.
+    </p>
+    <div>
+      Tu as désormais accès à un l'espace administrateur: 
+     <ul>
+     	<li> Statistiques</li>
+     	<li> Création d 'Evenements</li>
+     	<li> Encaissement d'Utilisateurs</li>
+     	<li> Et bien d'autres fonctionnalités</li>
+     </ul>
+    </div>
+
+    <p> À très vite sur <%= @url %> !
+
+  </body>
+</html>

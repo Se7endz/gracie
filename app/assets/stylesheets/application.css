@@ -16,6 +16,17 @@
  *= require agency.min
  */
 
+
+ /* GLOBAL */
+
+ html, body {
+ 	height: 100%;
+ }
+
+ .form-gap {
+    padding-top: 70px;
+}
+
 /*  STRIPE START*/
 .container-charges{
 	display: flex;
@@ -33,3 +44,330 @@
 	padding: 15px;
 }
 /*  STRIPE END*/
+
+/*   ADMIN DASHBOARD */
+
+.div-admin-header{
+
+	display: flex;
+	justify-content: space-around;
+	margin: 20px 5px 0 5px;
+}
+.div-admin-main-stats{
+	display: flex;
+	justify-content: space-between;
+}
+
+.div-admin-stats-data{
+	margin-left: 20px;
+}
+.div-admin-stats{
+	border: solid;
+	border-width: 1px;
+	width: 50%;
+	
+	margin: 20px;
+	border-radius: 3px;
+}
+.div-admin-stats-1{
+	width: 250px;
+	margin: 10px;
+}
+.div-admin-stats-bis{
+	margin: 20px 50px 20px 20px;
+	border: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	padding: 20px;
+}
+
+#form-control-1{
+	margin-top: 5px;
+}
+
+.div-admin-name{
+	font-weight: bold;
+	margin: 15px;
+}
+
+.div-main{
+	border-top: solid;
+	border-bottom: solid;
+	border-left: solid;
+	border-width: 1px;
+	margin: 20px 5px 20px 5px;
+}
+.div-admin-table{
+	border-bottom: solid;
+	border-width: 1px;
+	display: flex;
+	justify-content: row;
+	font-weight: bold;
+	font-size: large;
+
+}
+.div-admin-table-2{
+	display: flex;
+	justify-content: row;
+}
+
+.div-admin-table-1{
+	
+	border-right: solid;
+	border-width: 1px;
+	width: 150px;
+	min-width: 60px;
+	padding: 1px 3px 1px 10px;
+	
+}
+.div-admin-table-1-long{
+	border-right: solid;
+	border-width: 1px;
+	width: 250px;
+	min-width: 60px;
+	padding: 1px 3px 1px 10px;
+	
+}
+.div-admin-table-1-bis{
+	
+	border-right: solid;
+	border-width: 1px;
+	width: 35px;
+	min-width: 30px;
+	padding: 1px 3px 1px 10px;
+}
+
+.div-admin-table-bis-2{
+	border-right: solid;
+	border-width: 1px;
+	width: 70px;
+	min-width: 60px;
+	padding: 1px 3px 1px 5px;
+	font-weight: bold;
+}
+.div-admin-table-bis-3{
+	border-right: solid;
+	border-width: 1px;
+	width: 95px;
+	min-width: 60px;
+	padding: 1px 3px 1px 5px;
+}
+
+.div-admin-table-bis-4{
+	border-right: solid;
+	border-width: 1px;
+	width: 105px;
+	min-width: 60px;
+	padding: 1px 3px 1px 5px;
+}
+
+.div-searsh-bar{
+	width: 30%;
+	margin: 15px;
+}
+
+
+/*   ADMIN DASHBOARD */
+
+/* Code de conduite (CodeC) PAGES*/
+#title-codec {
+    margin-left: 33%;	
+    margin-bottom: 60px;
+    margin-top: 5%;
+}
+
+
+.codec-content {
+	
+}
+
+#codec-tab {
+	margin-top: 10%;
+}
+
+
+
+/*   ADMIN EDIT USER */
+
+
+.div-edit-user-all{
+	margin: 0 40px 40px 40px;
+	
+}
+.div-edit-user-infos-title{
+	margin: 10px;
+	
+}
+.div-edit-user-infos-title-bis{
+	width: 35%;
+	margin: 10px 10px 10px 60px;
+	
+
+}
+.div-edit-user-body{
+	margin: 10px;
+	
+}
+.div-edit-user-body-number{
+	margin: 10px;
+	border: solid;
+	border-width: 2px;
+	font-size: x-large;
+	min-width: 220px;
+	text-align: center;
+}
+
+
+.div-edit-user-body-info{
+	margin: 10px;
+	border: solid;
+	border-width: 2px;
+	font-size: large;
+	display: flex;
+	justify-content: row;
+}
+
+.div-edit-user-body-main{
+	display: flex;
+	justify-content: space-between;
+}
+
+.div-edit-user-body-edit{
+	margin: 10px;
+	border: solid;
+	border-width: 2px;
+	width: 250px;
+	padding: 10px;
+}
+
+.div-edit-user-body-edit p{
+	text-decoration: underline;
+}
+
+.div-edit-user-body-buttons{
+	
+	margin: 95px 10px 10px 10px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 100px;
+}
+.div-edit-user-footer{
+	margin: 20px;
+}
+
+.div-spe{
+	margin: 8px;
+}
+.div-spe-button{
+	margin-top: 5px;
+	
+}
+
+/*   ADMIN EDIT USER */
+
+
+/*   USER LOGIN */
+
+.div-main-confidential{
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+.div-confidential{
+	
+	font-size: small;
+	width: 400px;
+	text-align: center;
+}
+
+.container-login{
+	margin-top: 50px;
+}
+
+/*   USER LOGIN */
+
+
+/*   USER SECRET PAGE */
+
+.div-container-global{
+	
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+
+}
+
+.div-container-body{
+	
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.div-container-title{
+	display: flex;
+	
+	margin: 5px;
+	padding: 10px 0 10px 20px;
+}
+
+.div-container-belt{
+	display: flex;
+	border: solid;
+	border-radius: 8px;
+	border-width: 1px;
+	margin: 5px;
+	justify-content: space-between;
+	height: 70px;
+}
+
+.div-container-img{
+	border: solid;
+	border-radius: 8px;
+	border-width: 1px;
+	margin: 10px;
+	width: 300px;
+	padding: 5px;
+}
+
+.div-container-body-infos{
+	display: flex;
+	justify-content: space-between;
+	font-size: x-large;
+	border: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	margin: 5px;
+	
+}
+.div-container-body-infos-sub{
+	display: flex;
+	justify-content: space-between;
+	min-width: 600px;
+	margin: 10px 10% 10px 0;
+	padding: 10px;
+
+}
+
+.div-container-foot{
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 10px;
+}
+
+.div-container-foot-sub{
+	margin: auto;
+	margin-top: 5px; 
+
+}
+
+/*   USER SECRET PAGE */
+
+
+
+
+
+
+

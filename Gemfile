@@ -9,7 +9,7 @@ gem 'stripe'
 gem 'better_errors'
 gem 'devise'
 gem 'binding_of_caller'
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails'
 gem 'sendgrid-ruby'
 gem 'paypal-sdk-rest'
 gem 'omniauth'

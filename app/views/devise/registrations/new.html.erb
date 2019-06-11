@@ -1,70 +1,98 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :post }) do |f| %>
+
+
+<div class="card">
+<article class="card-body mx-auto" style="max-width: 400px;">
+  <h4 class="card-title mt-3 text-center">Créer un Compte</h4>
+  <p class="text-center">Inscrivez-vous gratuitement</p>
+  <p class="text-center">Déjà inscrit ? <%= render "devise/shared/links" %></p>
+    
+
+  <p class="divider-text text-center">
+        <span>OU</span>
+    </p>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autocomplete: "last_name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.number_field :age, autocomplete: "age" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :profession %><br />
-    <%= f.text_field :profession, autocomplete: "profession" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :nationality %><br />
-    <%= f.text_field :nationality, autocomplete: "nationality" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :poids %><br />
-    <%= f.text_field :weight, autocomplete: "poids" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :belt %><br />
-    <%= f.select(:belt, ["Blanche", "Bleue", "Violette", "Marron", "Noire"]) %>
-
-  </div>
-
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone, autocomplete: "phone" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+     </div>
+     <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "form-control", placeholder: "Prénom" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+     </div>
+     <%= f.text_field :last_name, autocomplete: "last_name", class: "form-control", placeholder: "Nom" %>
+    </div> <!-- form-group// -->
+     <div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+     </div>
+     <%= f.text_field :age, autocomplete: "age", class: "form-control", placeholder: "Age" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-weight"></i> </span>
+     </div>
+     <%= f.text_field :weight, autocomplete: "weight", class: "form-control", placeholder: "Poids" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-weight"></i> </span>
+       </div>
+       <select id="user_time_zone" name="user[belt]" class="form-control">
+                  <option value="Blanche">Blanche</option>
+                  <option value="Bleue">Bleue</option>
+                  <option value="Violette">Violette</option>
+                  <option value="Marron">Marron</option>
+                  <option value="Noire">Noire</option>
+                </select>
+      </div> 
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+     </div>
+       <%= f.email_field :email, autocomplete: "Email", class: "form-control", placeholder: "Email" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+    </div>
+      <%= f.text_field :phone, autocomplete: "phone", class: "form-control", placeholder: "Téléphone" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+    </div>
+    <%= f.text_field :profession, autocomplete: "profession", class: "form-control", placeholder: "Profession" %>
+  </div> <!-- form-group end.// -->
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+    </div>
+        
+    <%= f.password_field :password, autocomplete: "new-password",  class: "form-control", placeholder: "Mot de passe (6 caract. mini)" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+    </div>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password",  class: "form-control", placeholder: "Confirmation Mot de Passe" %>   
+     </div> <!-- form-group// -->                                      
+    <div class="form-group">
+      <%= f.submit "Valider", class: "btn btn-primary btn-block" %>
+    </div> <!-- form-group// -->      
+                                                                     
 <% end %>
+</article>
+<%= link_to "Annuler", :back, class: "btn btn-default btn-block" %>
 
-<%= render "devise/shared/links" %>
+</div> <!-- card.// -->
+
+<div class="div-main-confidential">
+  <div class="div-confidential">
+  En continuant, j'accepte les conditions générales du service et les règles de la communauté Gracie Barra, et j'ai lu la politique de confidentialité de Gracie Barra.
+</div>
+</div>
+

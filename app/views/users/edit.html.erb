@@ -1,0 +1,74 @@
+<div class="div-edit-user-all">
+	<div class="div-edit-user-title">
+		<h1>ADMINISTRATEUR </h1>
+ 		<h2>Gestion des Utilisateurs</h2>
+	</div>
+	<div class="div-edit-user-body">	
+		<div class="div-edit-user-body-number">
+			Utilisateur N°<%= @user_number %>
+		</div>
+		<div class="div-edit-user-body-info">
+     
+        		<div class="div-edit-user-infos-title">
+					<div>Prénom: </div>
+					<div>Nom:</div>
+					<div>Email:</div>
+					<div>Age:</div>
+					<div>Téléphone:</div>
+					<div>Poids:</div>
+					<div>Profession:</div>  
+		        </div>
+		        <div class="div-edit-user-infos-title-bis">
+			    	<div> <%= name_nil(@user_first_name) %></div>
+			    	<div> <%= name_nil(@user_last_name) %></div>
+			    	<div> <%= name_nil(@user_email) %></div>
+					<div> <%= name_nil(@user_age) %> ans </div>
+					<div> <%= name_nil(@user_phone) %></div>
+					<div> <%= name_nil(@user_weight) %> Kg.</div>
+					<div> <%= name_nil(@user_job) %></div>
+		        </div>
+		</div>
+		<div class="div-edit-user-body-main">		
+			<div class="div-edit-user-body-edit">
+				<p>Informations Modifiables: </p>
+				<div class="div-select">
+				<%= form_for @user_to_edit do |f| %>
+					<div class="div-spe">
+						Ceinture
+					</div>
+						<select id="user_time_zone" name="user[belt]" class="form-control">
+						  <option value="Blanche">Blanche</option>
+						  <option value="Bleue">Bleue</option>
+						  <option value="Violette">Violette</option>
+						  <option value="Marron">Marron</option>
+						  <option value="Noire">Noire</option>
+						</select>
+						<div class="div-spe">			
+							<%= f.submit "Modifier" %>
+						</div>
+					</div>
+				<% end %>
+			</div>
+			<div class="div-edit-user-body-buttons">
+				<div class="div-spe-button">
+				<%= link_to "Encaisser l'Utilisateur", new_charge_path, class: "btn btn-success btn-lg js-scroll-trigger"%>
+				</div>
+				<div class="div-spe-button">
+					<%= link_to "Supprimer l'Utilisateur", user_path(@user_to_edit), method: :delete, class: "btn btn-danger btn-lg js-scroll-trigger", :data => {:confirm => 'Etes-vous certain ?'}%>
+				</div>				
+			</div>
+		</div>
+		
+	</div>
+	<div class="div-edit-user-footer">
+		<%= link_to "Retour", :back, class: "btn btn-default btn-block" %>
+	</div>
+</div>
+
+
+
+
+
+
+
+

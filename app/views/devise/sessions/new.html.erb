@@ -1,27 +1,58 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
+<div class="container-login">
+<div class="row">
+  <aside class="col-sm-4">
+  </aside>
+<aside class="col-sm-4">
+<div class="card">
+<article class="card-body">
+  <%= link_to "S'enregistrer", new_registration_path(resource_name), class:"float-right btn btn-outline-primary" %>
+  <h4 class="card-title mb-4 mt-1">Connexion</h4>
+  <p>
+    <%= render "devise/shared/links" %>
+  </p>
+  <hr>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-group">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+    </div> <!-- form-group// -->
+    <div class="form-group">
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "******", class: "form-control" %>
+    </div> <!-- form-group// -->   
+    <div class="form-group">
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me, type: "checkbox" %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %> 
+    </div>                                   
+    <div class="row">
+        
+        <div class="col-md-6">
+            <div class="form-group">
+              <%= f.submit "Login", class: "btn btn-primary btn-block" %>
+                
+            </div> <!-- form-group// -->
+        </div>
+        <div class="col-md-6 text-right">
+            <%= link_to "Mot de passe oublié ?", new_password_path(resource_name) %>
+        </div>    
+                                             
+    </div> <!-- .row// -->                                                                  
 <% end %>
+</article>
+</div>
+</aside>
+ <aside class="col-sm-4">
+</aside>
 
-<%= render "devise/shared/links" %>
+</div>
+
+<%= link_to "Annuler", :back, class: "btn btn-default btn-block" %>
+</div>
+<div class="div-main-confidential">
+  <div class="div-confidential">
+  En continuant, j'accepte les conditions générales du service et les règles de la communauté Gracie Barra, et j'ai lu la politique de confidentialité de Gracie Barra.
+</div>
+</div>
+

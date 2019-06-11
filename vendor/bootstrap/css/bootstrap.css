@@ -4561,6 +4561,9 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
 }
 
 .card > hr {
@@ -10003,6 +10006,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   .container {
     min-width: 992px !important;
+    max-height: 100%;
   }
   .navbar {
     display: none;

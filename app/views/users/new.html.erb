@@ -1,0 +1,95 @@
+<div class="div-admin-header">
+	<div>
+	<h1>ADMINISTRATEUR </h1>
+
+ <h2>Gestion des Utilisateurs</h2>
+
+ 
+</div>
+	<div>
+		<%= form_for @user_new, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+		
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+     </div>
+     <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "form-control", placeholder: "First name" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+     </div>
+     <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: "form-control", placeholder: "Last name" %>
+    </div> <!-- form-group// -->
+     <div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+     </div>
+     <%= f.text_field :age, autofocus: true, autocomplete: "age", class: "form-control", placeholder: "Age" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-weight"></i> </span>
+     </div>
+     <%= f.text_field :weight, autofocus: true, autocomplete: "weight", class: "form-control", placeholder: "Weight" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-weight"></i> </span>
+       </div>
+       <select id="user_time_zone" name="user[belt]" class="form-control">
+                  <option value="Blanche">Blanche</option>
+                  <option value="Bleue">Bleue</option>
+                  <option value="Violette">Violette</option>
+                  <option value="Marron">Marron</option>
+                  <option value="Noire">Noire</option>
+                </select>
+      </div> 
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+     </div>
+       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+    </div>
+      <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: "form-control", placeholder: "Phone" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+    </div>
+    <%= f.text_field :profession, autofocus: true, autocomplete: "profession", class: "form-control", placeholder: "Profession" %>
+  </div> <!-- form-group end.// -->
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+    </div>
+        
+    <%= f.password_field :password, autocomplete: "new-password",  class: "form-control", placeholder: "Create password (6 char. min)" %>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+    </div>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password",  class: "form-control", placeholder: "repeat password" %>   
+     </div> <!-- form-group// -->                                      
+    <div class="form-group">
+      <%= f.submit "Sign up", class: "btn btn-primary btn-block" %>
+    </div> <!-- form-group// -->      
+                                                                     
+<% end %>
+
+		<p>
+		<a href="<%= root_path%>">Lien Home</a>
+		</p>
+	</div>
+	
+</div>
+<hr>
+<%= link_to "Cancel", :back, class: "btn btn-default btn-block" %>
+
+
+

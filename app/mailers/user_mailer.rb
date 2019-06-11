@@ -13,5 +13,10 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Bienvenue chez nous !') 
   end
 
+  def contract_email(user)
+  	@user = user
+  	@url  = 'http://graciebarra75.com'
+  	mail(to: @user.email, subject: 'Confirmation Inscription !')
+  end
 end
 
